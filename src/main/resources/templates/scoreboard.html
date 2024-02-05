@@ -9,9 +9,30 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" th:href="@{/css/score.css}">
 	<title>Score Board</title>
+	<script
+      src="https://kit.fontawesome.com/112eea2fba.js"
+      crossorigin="anonymous"
+    ></script>
 </head>
 <body>
-	
+	<!-- Header -->
+	<div th:insert="navbar.html :: navbar"></div>
+	<div class="container-fluid">
+	<h3>Score Board:</h3>
+	<table>
+		<tr>
+			<th>Name</th>
+			<th>Score</th>
+		</tr>
+		<tr th:each="person:${list}">
+			<td th:text="${person.username}"></td>
+			<td th:text="${person.totalCorrect}"></td>
+		</tr>
+	</table>
+	<button class="btn btn-primary m-2" type="button" th:onclick="window.location.href='/'">Go homePage</button>
+	</div>
+	 <!--Footer-->
+	<div th:insert="footer.html :: footer"></div>
 	<!-- Bootstrap JS -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
 </body>

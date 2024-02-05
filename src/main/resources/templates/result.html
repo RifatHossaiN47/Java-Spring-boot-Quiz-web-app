@@ -9,9 +9,35 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" th:href="@{/css/result.css}">
 	<title>Result Page</title>
+	<script
+      src="https://kit.fontawesome.com/112eea2fba.js"
+      crossorigin="anonymous"
+    ></script>
 </head>
 <body>
+	<!-- Header -->
+	<div th:insert="navbar.html :: navbar"></div>
 	
+	<div class="container-fluid">
+		<div class="row m-3">
+			<div class="col-8">
+				<h1>Your Score:</h1>
+				<p>Name:&nbsp;</p>
+				<p th:if="${result}" th:text="${result.username}"></p><br/>
+				<p>Total correct ans:&nbsp;</p>
+				<p th:if="${result}" th:text="${result.totalCorrect}"></p><br/>
+				<p>Total false ans:&nbsp;</p>
+				<p th:if="${result}" th:text="5-${result.totalCorrect}"></p><br/>
+			</div>
+		</div>
+		<div class="row m-3">
+			<button class="btn btn-primary m-2" type="button" th:onclick="window.location.href='/'">Go homePage</button>
+			<button class="btn btn-primary m-2" type="button" th:onclick="window.location.href='/score'">View ScoreBoard</button>
+		</div>
+	</div>
+	
+	 <!--Footer-->
+	<div th:insert="footer.html :: footer"></div>
 	<!-- Bootstrap JS -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
 </body>

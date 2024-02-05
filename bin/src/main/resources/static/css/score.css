@@ -8,12 +8,3 @@ body {
 	width: 100%;
 	overflow-x: hidden;
 }
-
-.df{
-            min-height: calc(100vh - 87px);
-}
-
-.colmn{
-  height: 600px;
-  font-size: 30px;
-}
