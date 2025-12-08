@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["jdk17", "maven"]
+
+[phases.build]
+cmds = ["mvn clean install -DskipTests"]
+
+[start]
+cmd = "java -Dserver.port=$PORT -jar target/spring-boot-quiz-starter-0.0.1-SNAPSHOT.jar"
