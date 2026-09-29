@@ -118,5 +118,5 @@ src/main/
 
 ## Author
 
-- **Rifat Hossain** — [@RifatHossaiN47](https://github.com/RifatHossaiN47)
-- Starter template inspired by DevRezaur.
+- **Md Rifat Hossen** — [@RifatHossaiN47](https://github.com/RifatHossaiN47)
+- Starter template inspired by DevRezaur.  
